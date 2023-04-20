@@ -3,10 +3,10 @@
 
 ## Overview
 
-Using this Terraform template, two instance of FTDv and one instance FMCv will be deployed in  Azure in a new Vnet with the following components, 
+Using this Terraform template, two instance of FTDv and one instance FMCv will be deployed in  Azure in a new Vnet with the following components,
 
 - one new Vnet with four network interfaces (1 Management networks, 3 data networks)
-- Routing table attachment to each of these subnets. 
+- Routing table attachment to each of these subnets.
 
 ## Prerequisites
 
@@ -39,9 +39,9 @@ Make sure you have the following:
 
 ## Resources
 
-Provisioning of FTDv servers in Multi AZs
+Provisioning of FTDv and FMCv servers in Multi AZs
 
-## Firewall Inputs
+## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
@@ -58,4 +58,13 @@ Provisioning of FTDv servers in Multi AZs
 | <a name="private id address for external lb"></a> [private_ip_address](#privateipaddesss) |private id address for external lb | `string` | `""` | yes|
 | <a name="virtual network id"></a> [virtual_network_id ](#virtualnetworkid) |virtual network id  for backend address pool for internal loadbancer | `string` | `""` | yes|
 
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_FTD_inside_interface_ip_address"></a> [FTD\_inside\_interface\_ip\_address](#output\_FTD\_inside\_interface\_ip\_address) | n/a |
+| <a name="output_FTD_outside_interface_ip_address"></a> [FTD\_outside\_interface\_ip\_address](#output\_FTD\_outside\_interface\_ip\_address) | n/a |
+| <a name="output_fmc_public_ip"></a> [fmc\_public\_ip](#output\_fmc\_public\_ip) | n/a |
+| <a name="output_fmcv-interface-management"></a> [fmcv-interface-management](#output\_fmcv-interface-management) | n/a |
+| <a name="output_mgmt_interface"></a> [mgmt\_interface](#output\_mgmt\_interface) | n/a |
 <!-- END_TF_DOCS -->
